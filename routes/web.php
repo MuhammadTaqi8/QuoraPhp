@@ -19,5 +19,11 @@ Route::get('/login', function () {
     return view('login');
 });
 
+// Route::get('/about', function () {
+//     return view('about');
+// });
+
 Route::post('/login', [UserController::class, 'login']);
 Route::get('/', [ProductController::class, 'index']);
+Route::get('detail/{id}', [ProductController::class, 'detail']);
+Route::get('/add_to_cart', [ProductController::class, 'add_to_cart']);
